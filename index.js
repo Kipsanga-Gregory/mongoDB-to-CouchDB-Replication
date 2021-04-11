@@ -1,7 +1,5 @@
 const express =require('express');
-const bodyParser =require('body-parser');
 const mongoose =require('mongoose');
-const cors = require('cors');
 const Nano = require('nano');
 
 const devices = require('./models/device.model')
@@ -13,7 +11,7 @@ const welnessPrograms = require('./models/wellnessProgram.model')
 
 
 
-const LOCAL_DB_URL = 'http://admin:Greg366.@localhost:5984/';
+const LOCAL_DB_URL = 'http://DB_USERNAME_HERE:PASSWORD_HERE@localhost:5984/';
 const nano = Nano(LOCAL_DB_URL);
 
 
@@ -23,10 +21,6 @@ const MONGOOSE_URI = 'mongodb+srv://admin:62vN01oqWnlAZO4X@h2yo-cluster.lzkwt.mo
   try {
 
     const app = express();
-    app.use(cors());
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(bodyParser.json());
-
       
     const createDB = async (dbName) => {
         try {
