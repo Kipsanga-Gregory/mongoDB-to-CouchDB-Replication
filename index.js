@@ -15,7 +15,7 @@ const LOCAL_DB_URL = 'http://DB_USERNAME_HERE:PASSWORD_HERE@localhost:5984/';
 const nano = Nano(LOCAL_DB_URL);
 
 
-const MONGOOSE_URI = 'mongodb+srv://admin:62vN01oqWnlAZO4X@h2yo-cluster.lzkwt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const MONGOOSE_URI = 'MONGODB_URL_HERE';
 
 (async () => {
   try {
